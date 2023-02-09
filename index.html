@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Calcul IMC</title>
   </head>
   <body>
-    <div class="container-imc">
+    <div class="container">
       <h1>Calcul <span>d'IMC</span></h1>
 
-      <form action="" class="imc">
-        <label class="height">
-          <input type="number" />
-        </label>
+      <form>
+        <div class="inputs-container">
+          <div class="input-group">
+            <label for="height">Votre taille en centimètres</label>
+            <input
+              type="number"
+              placeholder="Votre taille en centimètres"
+              id="height"
+              class="height-input"
+            />
+          </div>
 
-        <label class="weight">
-          <input type="number" />
-        </label>
+          <div class="input-group">
+            <label for="weight">Votre poids en Kg</label>
+            <input
+              type="number"
+              placeholder="Votre poids en Kg"
+              id="weight"
+              class="weight-input"
+            />
+          </div>
+        </div>
 
-        <button action="submit" class="btn">Calculer un IMC</button>
+        <button>Calculer un IMC</button>
       </form>
 
-      <div class="score">0</div>
-
-      <div class="text-score">En attente de résultat ...</div>
+      <div class="info">
+        <p class="bmi-value">0</p>
+        <p class="result">En attente de résultat ...</p>
+      </div>
     </div>
 
     <script src="app.js"></script>
